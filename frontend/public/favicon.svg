@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <defs>
+    <linearGradient id="bubbleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5EC6F2"/>
+      <stop offset="55%" stop-color="#4A7FE0"/>
+      <stop offset="100%" stop-color="#5B4FCF"/>
+    </linearGradient>
+
+    <mask id="ringMask">
+      <rect x="0" y="0" width="160" height="160" fill="black"/>
+      <circle cx="80" cy="75" r="62" fill="white"/>
+      <circle cx="80" cy="75" r="40" fill="black"/>
+      <polygon points="10,55 46,55 46,100 10,100" fill="black"/>
+    </mask>
+  </defs>
+
+  <circle cx="80" cy="75" r="62" fill="url(#bubbleGradient)" mask="url(#ringMask)"/>
+  <path d="M 26 118 L 14 156 Q 12 163 18 160 L 52 138 Z" fill="url(#bubbleGradient)"/>
+
+  <rect x="46" y="52" width="70" height="46" rx="18" fill="#EAF4FF"/>
+  <path d="M 58 96 L 58 110 L 74 96 Z" fill="#EAF4FF"/>
+
+  <circle cx="66" cy="75" r="4.4" fill="#4A7FE0"/>
+  <circle cx="81" cy="75" r="4.4" fill="#4A7FE0"/>
+  <circle cx="96" cy="75" r="4.4" fill="#4A7FE0"/>
+</svg>

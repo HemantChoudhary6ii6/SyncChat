@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="180" viewBox="0 0 640 180">
+  <defs>
+    <linearGradient id="bubbleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5EC6F2"/>
+      <stop offset="55%" stop-color="#4A7FE0"/>
+      <stop offset="100%" stop-color="#5B4FCF"/>
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B7FD1"/>
+      <stop offset="100%" stop-color="#5B4FCF"/>
+    </linearGradient>
+
+    <!-- Mask: full circle minus a wedge on the left, leaving a C-shaped ring -->
+    <mask id="ringMask">
+      <rect x="0" y="0" width="160" height="160" fill="black"/>
+      <circle cx="80" cy="75" r="62" fill="white"/>
+      <circle cx="80" cy="75" r="40" fill="black"/>
+      <!-- wedge opening on the left side -->
+      <polygon points="10,55 46,55 46,100 10,100" fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- Icon mark -->
+  <g transform="translate(10, 8)">
+    <!-- Ring (donut with left opening) -->
+    <circle cx="80" cy="75" r="62" fill="url(#bubbleGradient)" mask="url(#ringMask)"/>
+
+    <!-- Tail extending down-left from the ring -->
+    <path d="M 26 118 L 14 156 Q 12 163 18 160 L 52 138 Z" fill="url(#bubbleGradient)"/>
+
+    <!-- Inner rounded speech bubble -->
+    <rect x="46" y="52" width="70" height="46" rx="18" fill="#EAF4FF"/>
+    <path d="M 58 96 L 58 110 L 74 96 Z" fill="#EAF4FF"/>
+
+    <!-- Three dots -->
+    <circle cx="66" cy="75" r="4.4" fill="#4A7FE0"/>
+    <circle cx="81" cy="75" r="4.4" fill="#4A7FE0"/>
+    <circle cx="96" cy="75" r="4.4" fill="#4A7FE0"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="185" y="108" font-family="'Poppins','Segoe UI',system-ui,sans-serif" font-size="62" font-weight="700" fill="url(#textGradient)">Sync<tspan fill="#2B2F3A" font-weight="600">Chat</tspan></text>
+</svg>
