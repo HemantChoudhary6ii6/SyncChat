@@ -1,10 +1,49 @@
-# SyncChat
+<p align="center">
+  <img src="frontend/public/favicon.svg" alt="SyncChat logo" width="90" height="90" />
+</p>
 
-A real-time chat app with direct messages, group chats, an AI assistant, image sharing, typing indicators, read receipts, and message search.
+<h1 align="center">SyncChat</h1>
 
-**Stack:** React + Vite + Tailwind/DaisyUI (frontend) · Express + MongoDB + Socket.IO (backend) · Cloudinary (image uploads) · Groq API (AI assistant)
+<p align="center">
+  A real-time chat app with direct messages, group chats, an AI assistant, image sharing, typing indicators, read receipts, and message search.
+</p>
+
+<p align="center">
+  <a href="https://syncchat-l30s.onrender.com"><img src="https://img.shields.io/badge/demo-live-brightgreen" alt="Live demo"></a>
+  <img src="https://img.shields.io/badge/node-18%2B-339933?logo=node.js&logoColor=white" alt="Node 18+">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React 19">
+  <img src="https://img.shields.io/badge/MongoDB-database-47A248?logo=mongodb&logoColor=white" alt="MongoDB">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT license">
+</p>
+
+<p align="center">
+  <a href="https://syncchat-l30s.onrender.com"><strong>Live demo →</strong></a>
+</p>
 
 ---
+
+## ✨ Features
+
+- 💬 **Direct messages & group chats** — 1:1 conversations plus named group chats with multiple members
+- 🤖 **Built-in AI assistant** — chat with an AI (powered by Groq's Llama 3.3 70B) right inside the app, no separate tab needed
+- 🖼️ **Image sharing** — send photos in any conversation, uploaded and hosted via Cloudinary
+- ✅ **Read receipts & delivery status** — single/double check marks like modern messaging apps
+- ⌨️ **Live typing indicators** — see when someone's typing, in real time via Socket.IO
+- 🟢 **Online presence** — know who's currently online
+- 🔍 **Message search** — search across your conversations instantly
+- 🔐 **Secure auth** — JWT-based sessions with hashed passwords (bcrypt)
+- 🎨 **Clean, responsive UI** — built with Tailwind CSS + DaisyUI, works on mobile and desktop
+
+## 🛠️ Tech stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React 19, Vite, Tailwind CSS, DaisyUI, Zustand, React Router |
+| Backend | Node.js, Express 5, Socket.IO |
+| Database | MongoDB (Mongoose) |
+| Image storage | Cloudinary |
+| AI assistant | Groq API (Llama 3.3 70B Versatile) |
+| Auth | JWT + bcrypt |
 
 ## Project structure
 
@@ -43,11 +82,6 @@ CLOUDINARY_API_SECRET=your_api_secret
 
 AI_API_KEY=your_groq_api_key
 ```
-
-The frontend needs no `.env` — it talks to `http://localhost:5001/api` automatically in dev, and to `/api` (same origin) in production.
-
-> **Never commit `.env`.** `backend/.gitignore` (included in this repo) covers this — double-check it's actually being ignored with `git status` before your first commit.
-
 ---
 
 ## 3. Local development
@@ -93,9 +127,6 @@ Works on Render, Railway, Fly.io, a VPS, etc. Example using **Render**:
 
 ---
 
-## 5. Notes
+## 🤝 Contributing
 
-- `backend/.gitignore` protects `.env` and `node_modules` from ever being committed.
-- The AI assistant is powered by Groq's `llama-3.3-70b-versatile` model — change the model string in `backend/src/controllers/ai.controller.js` if you want a different one.
-- Profile pictures and message image attachments both upload through Cloudinary.
-- If `frontend/dist` doesn't exist (e.g. you're running the backend standalone without building the frontend), the backend skips static serving automatically and just runs as an API.
+Issues and pull requests are welcome. If you're adding a feature, please open an issue first to discuss what you'd like to change.
